@@ -17,8 +17,8 @@ export default function Home(){
   const isMismatched = useNetworkMismatch()
 
   // Campos a Serem Personalizados
-    const nameProjet = "BootCamp iBEED"  // Nome do seu Projeto
-    const { contract } = useContract("0x0Eda1134E9D0e19727Ab1Ca0A1B0F71b0C22DA44") // Endereço da sua Coleção
+    const nameProjet = "XYZ - Agência de Viagens"  // Nome do seu Projeto
+    const { contract } = useContract("0x29E3323597BA1af1CcAcef13a8B0050a0d113033") // Endereço da sua Coleção
     const tokenId = 0 // Token ID que você quer liberar o Mint
   // -------------------------------
 
@@ -89,6 +89,7 @@ export default function Home(){
       <main className={styles.mainContainer}>
         <div className={styles.walletContainer}>
           { address && isMismatched ?
+          // mudar aqui
             <button onClick={ () => switchChain(ChainId.Mumbai)} className={styles.btnChain}>Switch Chain</button>
           : 
             <ConnectWallet modalTitle="Login" className={styles.btn}/>
